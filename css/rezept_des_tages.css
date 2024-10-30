@@ -1,0 +1,764 @@
+body {
+  margin: 0;
+  scroll-behavior: smooth;
+  font: 16px 'Raleway', sans-serif;
+  overflow-x: hidden;
+}
+
+header {
+  border: 1px solid rgba(128, 128, 128, 0.26);
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 0 3px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
+}
+
+.nav-elements {
+  display: flex;
+}
+
+.header-link {
+  position: relative;
+  text-decoration: none;
+  color: grey;
+  padding: 8px;
+  font-size: 20px;
+}
+
+.header-link:hover {
+  color: green;
+}
+
+.header-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2.5px;
+  background-color: green;
+  bottom: 1px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.header-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.logo {
+  width: 220px;
+}
+
+.burger-menu-toggle {
+  display: none;
+  top: 10px;
+  right: 10px;
+  background-color: #333;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.burger-menu-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+  margin-bottom: 5px;
+}
+
+.mobile-nav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+}
+
+.mobile-nav.open {
+  display: block;
+}
+
+.mobile-nav .nav-elements {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.burger-menu-toggle.active {
+  background-color: #444;
+}
+
+@media (max-width: 768px) {
+  .nav-elements {
+    display: none;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-link {
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+}
+
+
+h4 {
+  display: flex;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.spann {
+  margin-left: 40px;
+}
+
+.recipe-header-sec {
+  text-decoration: underline;
+}
+
+.recipe_short_information_tipp {
+  background-color: rgb(236, 233, 233);
+  border-radius: 10px;
+  padding: 6px 6px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  max-width: 40px;
+  font-weight: 600;
+}
+
+h2 {
+  padding-top: 16px;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+.error {
+  margin-left: 164px;
+  text-align: start;
+  color: red;
+  display: none;
+}
+
+.link_btn {
+  width: 200px;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  cursor: pointer;
+  background-color: green;
+  font-size: 16px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.link_btn:hover {
+  background-color: green;
+}
+
+
+button:hover {
+  background-color: #333;
+  transform: scale(1.1);
+}
+
+.heading-for {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.recipe-header-sec {
+  text-decoration: underline;
+}
+
+.recipe_short_information_tipp {
+  background-color: rgb(236, 233, 233);
+  border-radius: 10px;
+  padding: 6px 6px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  max-width: 40px;
+  font-weight: 600;
+}
+
+h2 {
+  padding-top: 16px;
+  font-size: 20px;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+input {
+  padding: 0 20px;
+}
+
+.recipe_selection {
+  background-color: rgb(239, 235, 235);
+  height: 30vh;
+}
+
+.ingredients_input_cake {
+  font-size: 16px;
+  height: 39px;
+  width: 200px;
+  border-width: 1px 1px;
+  border-top: 1px solid rgb(236, 233, 233);
+  border-left: 1px solid rgb(236, 233, 233);
+  border-bottom: 1px solid rgb(236, 233, 233);
+  border-right: 1px solid rgb(236, 233, 233);
+  padding: 0;
+}
+
+.calculate_ingredients_container_cake {
+  padding-top: 48px;
+  padding-bottom: 12px;
+  padding-left: 164px;
+  padding-right: 164px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.text_field-cake {
+  display: flex;
+  align-items: center;
+  padding-right: 8px;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  padding-top: 16px;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.recipe_images {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+h3 {
+  font-weight: normal;
+  margin: 0;
+  color: black;
+}
+
+.main-cake {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 36px 164px;
+}
+
+.image_noodles {
+  height: 190px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.cake {
+  display: flex;
+  flex-direction: row;
+  padding: 0 164px;
+  justify-content: flex-start;
+  gap: 24px;
+
+}
+
+.ingredients_recipe {
+  font-size: 16px;
+  height: 39px;
+  width: 200px;
+  border-width: 1px 1px;
+  border-top: 1px solid rgb(236, 233, 233);
+  border-left: 1px solid rgb(236, 233, 233);
+  border-bottom: 1px solid rgb(236, 233, 233);
+  border-right: 1px solid rgb(236, 233, 233);
+  padding: 0;
+}
+
+.info-recipe {
+  background-color: rgb(236, 233, 233);
+  border-radius: 10px;
+  padding: 6px 6px;
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.recipe_icon {
+  height: 14px;
+  width: 14px;
+  padding-right: 8px;
+}
+
+.calculate-recipe {
+  padding-top: 48px;
+  padding-bottom: 12px;
+  padding-left: 164px;
+  padding-right: 164px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.text_recipe {
+  display: flex;
+  align-items: center;
+  padding-right: 8px;
+}
+
+.table_cake {
+  width: 100%;
+  padding: 0 164px;
+  font-size: 16px;
+  text-align: left;
+
+}
+
+.row_1 {
+  padding: 12px;
+  font-weight: normal;
+  border-radius: 10px;
+}
+
+.grey_row {
+  background-color: rgb(236, 233, 233);
+}
+
+.Zubereitung_cake {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 400px;
+}
+
+.text_Zubereitung {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-bottom: 124px;
+  padding-left: 164px;
+  padding-right: 164px;
+}
+
+p {
+  font-size: 16px;
+}
+
+.heading_text {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+
+.profile_image {
+  width: 84px;
+  border-radius: 50%;
+  margin-top: 24px;
+  margin-right: 36px;
+  width: 84px;
+  height: 84px;
+  object-fit: cover;
+}
+
+.profile_name {
+  font-size: 24px;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.404);
+  height: 220px;
+  width: 100%;
+}
+
+.verschieben {
+  position: absolute;
+  right: 35px;
+  padding-top: 80px;
+}
+
+.socials-container {
+  display: flex;
+  gap: 20px;
+}
+
+.socials-container a {
+  padding: 1em;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+}
+
+.socials-container a svg {
+  height: 32px;
+}
+
+.socials-container a::before {
+  content: attr(data-social);
+  position: absolute;
+  background-color: var(--accent-color);
+  color: white;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border-radius: 100px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  transform: translateY(-30px) rotate(25deg);
+  opacity: 0;
+  transition: 200ms cubic-bezier(0.42, 0, 0.44, 1.68);
+}
+
+.socials-container a:hover {
+  background-color: var(--accent-color);
+  fill: white;
+}
+
+.socials-container a::after {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid var(--accent-color);
+  transform: translateY(0) rotate(25deg);
+  opacity: 0;
+  transition: 200ms cubic-bezier(0.42, 0, 0.44, 1.68);
+}
+
+.socials-container a:hover::before {
+  transform: translateY(-65px) rotate(0);
+  opacity: 1;
+}
+
+.socials-container a:hover::after {
+  transform: translateY(-42px) rotate(0);
+  opacity: 1;
+}
+
+.Zubereitung_cake {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.Zeitangabe {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.h3_cake {
+  font-size: 16px;
+  margin: 0;
+  padding-right: 8px;
+}
+
+@media (max-width: 1085px) {
+  .info-recipe1 {
+    display: none !important;
+  }
+}
+
+@media (max-width: 840px) {
+
+  .error {
+    margin-left: 112px;
+  }
+
+  header {
+    justify-content: space-between;
+    padding: 0 110px;
+    height: 80px;
+  }
+
+  .logo {
+    width: 180px;
+  }
+
+  .nav-elements {
+    display: none;
+  }
+
+  .burger-menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-link {
+    margin-bottom: 10px;
+  }
+
+  .main-cake {
+    padding: 12px 112px;
+  }
+
+  .image_noodles {
+    height: 164px;
+  }
+
+  .cake {
+    padding: 10px 112px;
+  }
+
+  .calculate_ingredients_container_cake {
+    padding-left: 112px;
+    padding-right: 112px;
+  }
+
+  .table_cake {
+    padding: 0 112px;
+  }
+
+  .profile {
+    padding-left: 112px;
+    padding-right: 112px;
+    padding-bottom: 84px;
+  }
+
+  footer {
+    height: 184px;
+  }
+}
+
+@media (max-width: 718px) {
+  .info-recipe2 {
+    flex-direction: column;
+    align-items: start;
+    font-size: 16px;
+  }
+
+  .h3_cake {
+    padding-bottom: 8px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 650px) {
+
+  .error {
+    margin-left: 84px;
+  }
+
+  .main-cake {
+    padding: 12px 84px;
+  }
+
+  h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .image_noodles {
+    height: 148px;
+  }
+
+  .cake {
+    padding: 10px 84px;
+  }
+
+  .calculate_ingredients_container_cake {
+    padding-left: 84px;
+    padding-right: 84px;
+    padding-top: 40px;
+  }
+
+  .ingredients_input_cake {
+    width: 150px;
+  }
+
+
+
+  .table_cake {
+    padding: 0 84px;
+  }
+
+  .profile {
+    padding-left: 84px;
+    padding-right: 84px;
+    padding-bottom: 64px;
+  }
+
+  footer {
+    height: 124px;
+  }
+
+  .verschieben {
+    padding-top: 40px;
+  }
+}
+
+@media (max-width: 570px) {
+  .logo {
+    width: 148px;
+  }
+
+  .header {
+    width: 100vh;
+  }
+
+  .image_noodles {
+    height: 124px;
+  }
+
+  .main-cake {
+    padding: 12px 48px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .cake {
+    padding: 10px 48px;
+  }
+
+  .calculate_ingredients_container_cake {
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-top: 36px;
+  }
+
+  .table_cake {
+    padding: 0 48px;
+  }
+
+  .profile {
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-bottom: 56px;
+  }
+
+
+}
+
+@media (max-width: 450px) {
+
+  .error {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  header {
+    padding: 0 60px;
+  }
+
+
+  .logo {
+    width: 124px;
+  }
+
+  .image_noodles {
+    height: 124px;
+  }
+
+  .main-cake {
+    padding: 12px 24px;
+  }
+
+  .cake {
+    padding: 10px 24px;
+    width: auto;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .info-recipe {
+    padding: 0;
+    font-size: 16px;
+  }
+
+  .calculate_ingredients_container_cake {
+    padding-top: 24px;
+  }
+
+  .text_field-cake {
+    font-size: 16px;
+    height: 36px;
+  }
+
+  .ingredients_input_cake {
+    font-size: 16px;
+    width: 112px;
+    height: 36px;
+  }
+
+
+  .table_cake {
+    padding: 0 48px;
+    padding: 0 24px;
+  }
+
+  .text_Zubereitung {
+    font-size: 20px;
+  }
+
+  .Zubereitung_cake {
+    width: unset;
+    gap: 8px;
+  }
+
+  .profile {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .heading_text {
+    font-size: 20px;
+  }
+
+
+}
+
+@media (max-width: 900px) {
+
+  .verschieben {
+    position: sticky;
+  }
+
+  .socials-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
